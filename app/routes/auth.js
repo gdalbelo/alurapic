@@ -1,6 +1,5 @@
 module.exports = function(app) {
 
-    var api = app.api.auth;
-    app.post('/autenticar', api.autentica);
-    app.use('/*', api.verificaToken);
+    app.post('/autenticar', app.api.auth.autentica);
+    app.use('/*', app.api.auth.verificaToken);
 };
